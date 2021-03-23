@@ -1,0 +1,41 @@
+{% load static %}
+    
+<!DOCTYPE html>
+
+
+<html>
+
+<script href="{% static 'js/pit.js'  %}"></script>
+<head>
+    
+    <title>{% block title %} {%  endblock  %}</title>
+    <link href="{% static 'css/pit.css' %}"  rel="stylesheet">
+
+</head>
+
+
+<body>
+    <header>
+
+        <h1>Hipotenusa</h1>
+
+    </header>
+
+    <main>
+        {% block content %}
+        <div class="right">
+            <input type="text" value="Insira seu número" id="number">²</input>
+        </div>
+        <div class="left">
+        <input type="text" value="Insira seu número" id="number">²</input>
+        </div>
+        <div>
+            <button type="submit" value="Calcular a Hipotenusa!" name="hipot"></button>
+        </div>
+        {% endblock %}
+
+    </main>
+    
+</body>
+
+</html>
